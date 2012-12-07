@@ -1,0 +1,63 @@
+﻿<Window
+    x:Uid="Window_2" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PointerWare" Width="1024" Height="600" WindowState="Normal" WindowStyle="None" 
+    HorizontalAlignment="Left" VerticalAlignment="Top"
+    AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="WpfApplication1.viewAllUser">
+        <Grid x:Uid="Grid_1">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="142*"/>
+                <RowDefinition x:Uid="RowDefinition_2" Height="44*"/>
+                <!--this is the off button-->
+                <RowDefinition x:Uid="RowDefinition_3" Height="33*"/>
+                <RowDefinition x:Uid="RowDefinition_4" Height="40*"/>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="46*" />
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="42*" />
+            <!--main window-->
+                <RowDefinition x:Uid="RowDefinition_5" Height="43*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_1" Width="340*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2" Width="340*"/>
+                <!--main window-->
+                <ColumnDefinition x:Uid="ColumnDefinition_3" Width="340*"/>
+                
+            </Grid.ColumnDefinitions>
+        <!--Main lable for view user-->
+        <Label Grid.Column="1" FontSize="36" FontFamily="Calibri" Grid.ColumnSpan="2" Margin="1,0,1,90">All User form your contact</Label>
+
+        <Label Grid.Column="0" Grid.Row="1" FontSize="30" HorizontalAlignment="Center" FontFamily="Calibri" Margin="1,1,1,1">User Email</Label>
+
+        <Label Grid.Column="1" Grid.Row="1" FontSize="30" HorizontalAlignment="Center" FontFamily="Calibri" Margin="1,1,1,1">User Password</Label>
+
+        <Label Grid.Column="2" Grid.Row="1" FontSize="30" HorizontalAlignment="Center" FontFamily="Calibri" Margin="1,1,1,1">User Status</Label>
+
+       
+            <Border Margin="18,0,12,0" Name="border1" Height="290" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Grid.RowSpan="7" Grid.Row="2">
+
+            <ListView Margin="10,10,0,13" Name="ListView1" HorizontalAlignment="Left"
+
+         VerticalAlignment="Top" Width="928" Height="320">
+
+                <ListViewItem Content="Coffie@hotmail.com"></ListViewItem>
+
+                <ListViewItem Content="Tea@icemail.com"></ListViewItem>
+
+                <ListViewItem Content="Orange_Juice@coldmail.com"></ListViewItem>
+
+                <ListViewItem Content="Milk@hotmail.com"></ListViewItem>
+
+                <ListViewItem Content="IcedTea@coldmail.com"></ListViewItem>
+
+                <ListViewItem Content="MangoShake@pulpmail.com"></ListViewItem>
+
+            </ListView>
+        </Border>     
+    </Grid>
+</Window>
