@@ -38,7 +38,7 @@
 
         <Button Content="View User" Grid.Row="3" Grid.Column="5" Name="DeleteUser" Click="ViewUser_Click" FontSize="20" ></Button>
 
-        <!--Home Button-->
+        <!--back Button-->
         <Button Content="Back" Grid.Row="0" Grid.Column="0" FontSize="35" Name="Home" Click="Back_Click" ></Button>
     </Grid>
 </Window>

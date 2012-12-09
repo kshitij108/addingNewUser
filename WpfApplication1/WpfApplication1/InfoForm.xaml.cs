@@ -69,43 +69,108 @@ namespace WpfApplication1
             (sender as Button).ContextMenu.IsOpen = true;
           
         }
-        private void First_Option(object sender, RoutedEventArgs e)
-        {
+        //private void First_Option(object sender, RoutedEventArgs e)
+        //{
 
-            birthMonthDefault.Visibility = Visibility.Visible;
-            birthMonth.Visibility = Visibility.Hidden;
-            birthDate.Visibility = Visibility.Hidden;
-            pswdLable.Visibility = Visibility.Hidden;
-            pswdTextbox.Visibility = Visibility.Hidden;
+        //    birthMonthDefault.Visibility = Visibility.Visible;
+        //    birthMonth.Visibility = Visibility.Hidden;
+        //    birthDate.Visibility = Visibility.Hidden;
+        //    pswdLable.Visibility = Visibility.Hidden;
+        //    pswdTextbox.Visibility = Visibility.Hidden;
            
-        }
-        private void Second_Option(object sender, RoutedEventArgs e)
-        {
+        //}
+        //private void Second_Option(object sender, RoutedEventArgs e)
+        //{
 
-            birthMonthDefault.Visibility = Visibility.Hidden;
-            birthMonth.Visibility = Visibility.Hidden;
-            birthDate.Visibility = Visibility.Hidden;
-            pswdLable.Visibility = Visibility.Visible;
-            pswdTextbox.Visibility = Visibility.Visible;
+        //    birthMonthDefault.Visibility = Visibility.Hidden;
+        //    birthMonth.Visibility = Visibility.Hidden;
+        //    birthDate.Visibility = Visibility.Hidden;
+        //    pswdLable.Visibility = Visibility.Visible;
+        //    pswdTextbox.Visibility = Visibility.Visible;
            
             
-        }
-        private void Third_Option(object sender, RoutedEventArgs e)
-        {
+        //}
+        //private void Third_Option(object sender, RoutedEventArgs e)
+        //{
 
-            birthMonthDefault.Visibility = Visibility.Hidden;
-            birthMonth.Visibility = Visibility.Visible;
-            birthDate.Visibility = Visibility.Visible;
-            pswdLable.Visibility = Visibility.Hidden;
-            pswdTextbox.Visibility = Visibility.Hidden;
+        //    birthMonthDefault.Visibility = Visibility.Hidden;
+        //    birthMonth.Visibility = Visibility.Visible;
+        //    birthDate.Visibility = Visibility.Visible;
+        //    pswdLable.Visibility = Visibility.Hidden;
+        //    pswdTextbox.Visibility = Visibility.Hidden;
             
-        }
+        //}
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void AddUSerValue(object sender, RoutedEventArgs e)
+        {
+            test();
+        }
+
+        public void test()
+        {
+
+            //if (TbFirstName.Text == dbstring)
+            //{
+            //}
+            String str = "srhdghf";
+            str = TbFirstName.Text + "  " + TbLastName.Text;
+            if (pswType.SelectedIndex == 0)
+            {
+                str = str + " " + birthMonthDefault.Text;
+
+            }
+            if (pswType.SelectedIndex == 1)
+            {
+                str = str + " " + pswdTextbox.Text;
+
+            }
+            if (pswType.SelectedIndex == 2)
+            {
+                str = str + " " + birthMonth.Text + birthDate.Text;
+
+            }
+
+            //MessageBox showmsg;
+            MessageBox.Show(str);
         
+        }
+
+        private void pswType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (pswType.SelectedIndex == 0)
+            {
+                birthMonthDefault.Visibility = Visibility.Visible;
+                birthMonth.Visibility = Visibility.Hidden;
+                birthDate.Visibility = Visibility.Hidden;
+                pswdLable.Visibility = Visibility.Hidden;
+                pswdTextbox.Visibility = Visibility.Hidden;
+            }
+            if (pswType.SelectedIndex == 1)
+            {
+                birthMonthDefault.Visibility = Visibility.Hidden;
+                birthMonth.Visibility = Visibility.Hidden;
+                birthDate.Visibility = Visibility.Hidden;
+                pswdLable.Visibility = Visibility.Visible;
+                pswdTextbox.Visibility = Visibility.Visible;
+            }
+            if (pswType.SelectedIndex == 2)
+            {
+                birthMonthDefault.Visibility = Visibility.Hidden;
+                birthMonth.Visibility = Visibility.Visible;
+                birthDate.Visibility = Visibility.Visible;
+                pswdLable.Visibility = Visibility.Hidden;
+                pswdTextbox.Visibility = Visibility.Hidden;
+            }
+        }
 
        
       

@@ -32,9 +32,8 @@ namespace WpfApplication1
         private void Back_Click(object sender, RoutedEventArgs e)
         {
 
-            var newWindowOptions = new optionsPage();  
-            newWindowOptions.ShowDialog();
-          
+            this.Close();
+
         }
         private void ViewUser_Click(object sender, RoutedEventArgs e)
         {

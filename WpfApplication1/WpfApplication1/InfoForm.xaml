@@ -37,7 +37,7 @@
         
         <!--Select Password Type-->
         <Label Grid.Column="1" Grid.Row="3" FontSize="36" FontFamily="Calibri" Margin="0,0,0,0">Password Type:</Label>
-        <Button Content="Select Type" x:Uid="PswTypeButton" x:Name="PswTypeButton" Grid.Column="2" Grid.Row="3" FontFamily="Calibri" Click="Button_Click" FontSize="35" ContextMenuService.IsEnabled="False" Margin="5,5,5,20" >
+        <!--<Button Content="Select Type" x:Uid="PswTypeButton" x:Name="PswTypeButton" Grid.Column="2" Grid.Row="3" FontFamily="Calibri" Click="Button_Click" FontSize="35" ContextMenuService.IsEnabled="False" Margin="5,5,5,20" >
             <Button.ContextMenu>
                 <ContextMenu >
                     <MenuItem Header="BirthMonth" Click="First_Option"/>
@@ -45,8 +45,16 @@
                     <MenuItem Header="BirthDate" Click="Third_Option"/>
                 </ContextMenu>
             </Button.ContextMenu>
-        </Button>
-        
+        </Button>-->
+
+        <ComboBox Grid.Column="2" Grid.Row="3" Margin="0,5,5,6" Name="pswType" HorizontalAlignment="Right" Width="243" SelectionChanged="pswType_SelectionChanged" DataContext="{Binding}" SelectedIndex="-1">
+            <ComboBoxItem Content="BirthMonth" Uid="0"></ComboBoxItem>
+
+            <ComboBoxItem Content="AlphaString" Uid="1"></ComboBoxItem>
+
+            <ComboBoxItem Content="BirthDate" Uid="2"></ComboBoxItem>
+
+        </ComboBox>
         <!--First option: Birth month-->
         <Label Grid.Column="1" Grid.Row="4" FontSize="36" FontFamily="Calibri" Margin="0,0,0,0">Password: </Label>
         <ComboBox Grid.Column="2" Grid.Row="4" Margin="0,5,10,7" Name="birthMonthDefault" HorizontalAlignment="Right" Width="243">
@@ -180,10 +188,10 @@
 
 
         <!--Finally Add User-->
-        <Button x:Uid="AddUser" x:Name="AddUser" Content="Add User" Grid.Column="1" Grid.Row="5" Click="AddButton" FontFamily="Calibri" FontSize="40" ContextMenuService.IsEnabled="False" Margin="10,10,10,10" Visibility="Visible" ></Button>
+        <Button x:Uid="AddUser" x:Name="AddUser" Content="Add User" Grid.Column="1" Grid.Row="5" Click="AddUSerValue" FontFamily="Calibri" FontSize="40" ContextMenuService.IsEnabled="False" Margin="10,10,10,10" Visibility="Visible" ></Button>
 
-        <!--Finally Add User-->
-        <Button x:Uid="cancel" x:Name="cancel" Content="Cancel" IsCancel="True" Grid.Column="2" Grid.Row="5" Click="Button_Click" FontFamily="Calibri" FontSize="40" ContextMenuService.IsEnabled="False" Margin="10,10,10,10" Visibility="Visible"  ></Button>
+        <!-- Cancel -->
+        <Button x:Uid="cancel" x:Name="cancel" Content="Cancel" IsCancel="True" Grid.Column="2" Grid.Row="5" Click="cancelButton_Click" FontFamily="Calibri" FontSize="40" ContextMenuService.IsEnabled="False" Margin="10,10,10,10" Visibility="Visible"  ></Button>
 
     </Grid>
 </Window>
