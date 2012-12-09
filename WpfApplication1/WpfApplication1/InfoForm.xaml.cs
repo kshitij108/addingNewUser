@@ -121,8 +121,13 @@ namespace WpfApplication1
             //if (TbFirstName.Text == dbstring)
             //{
             //}
-            String str = "srhdghf";
+            String str = "";
             str = TbFirstName.Text + "  " + TbLastName.Text;
+            if (pswType.SelectedIndex == -1)
+            {
+                str = "Please select the password and then add the user!";
+
+            }
             if (pswType.SelectedIndex == 0)
             {
                 str = str + " " + birthMonthDefault.Text;
@@ -146,6 +151,7 @@ namespace WpfApplication1
 
         private void pswType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+          
             if (pswType.SelectedIndex == 0)
             {
                 birthMonthDefault.Visibility = Visibility.Visible;

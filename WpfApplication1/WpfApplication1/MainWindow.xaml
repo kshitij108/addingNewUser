@@ -39,7 +39,7 @@
             <Button Content="Manage User" Grid.Row="3" Grid.Column="5" Name="ManageUser" FontSize="20" Click="ManageUser_Click" ></Button>
 
         <!--Home Button-->
-        <Button Content="Home" Grid.Row="0" Grid.Column="0" FontSize="35" Name="Home" Click="Home_Click" ></Button>
+        <Button Content="Done" Grid.Row="0" Grid.Column="0" FontSize="35" Name="Home" Click="Done_Click" ></Button>
     
         </Grid>
 </Window>

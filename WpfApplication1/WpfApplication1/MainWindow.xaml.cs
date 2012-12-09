@@ -31,11 +31,10 @@ namespace WpfApplication1
             newWindowOptions.ShowDialog();
         }
 
-        private void Home_Click(object sender, RoutedEventArgs e)
+        private void Done_Click(object sender, RoutedEventArgs e)
         {
 
-            var newWindowHome = new MainWindow();
-            newWindowHome.ShowDialog();
+            this.Close();
 
         }
 
